@@ -1,0 +1,10 @@
+<div>
+    <p>Выбранные файлы <a (click)="onClear()">Очистить</a></p>
+    <ul *ngIf="selectedFiles.length != 0; else elseBlock">
+        <li *ngFor="let file of selectedFiles">{{file.name}}</li>
+    </ul>
+    <ng-template #elseBlock>Файлов пока нет!</ng-template>
+</div>
+<input style="display: none;" type="file" (change)="onFilesSelected($event)" multiple #filesInput>
+<button type="button" (click)="filesInput.click()">Выбрать файлы</button>
+<button type="button" (click)="onUpload()">Загрузить</button>
