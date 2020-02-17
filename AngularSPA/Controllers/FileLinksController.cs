@@ -80,6 +80,7 @@ namespace AngularSPA.Controllers
 
             var net = new WebClient();
             var data = net.DownloadData(fileInfo.Location);
+            if (data == null) return NotFound();
             var content = new MemoryStream(data);
             var contentType = "APPLICATION/force-download";
             var fileName = fileLink.Name;
