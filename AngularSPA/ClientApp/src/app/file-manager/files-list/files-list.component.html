@@ -1,4 +1,26 @@
-<h3>Файлы пользователя</h3>
-<ul>
-    <li *ngFor="let file of service.files">{{file.name}}</li>
-</ul>
+<div class="border rounded-sm p-3 shadow-sm mb-2" *ngFor="let key of service.keys">
+  <h3>{{key}}</h3>
+  <div class="list-files">
+    <div *ngFor="let fl of service.linksList[key]" class="list-item" (click)="onClickListItem($event)">
+      <!--<div class="file-actions hidden">
+        <a>Скачать</a>
+        <a>Удалить</a>
+      </div>-->
+      <div class="list-item-card">
+        <div class="list-item-image">
+          <i class="fa fa-file-o list-item-i" aria-hidden="true"></i>
+          <div class="on-click-item hidden">
+            <a class="button-element" (click)="onDownload(fl.Id, fl.Name)">
+              <i class="fas fa-file-download"></i>
+            </a>
+            <a class="button-element">
+              <i class="fas fa-trash-alt" (click)="onRemove(fl.Id)"></i>
+            </a>
+          </div>
+        </div>
+        <span class="list-item-name" title="{{fl.Name}}">{{fl.Name}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
