@@ -1,14 +1,14 @@
 import { Component, OnInit } from "@angular/core";
 
 @Component({
-    selector: 'app-file-manager',
-    templateUrl: './file-manager.component.html'
+  selector: 'app-file-manager',
+  templateUrl: './file-manager.component.html'
 })
 
 export class FileManagerComponent implements OnInit {
 
-    constructor() { }
+  constructor() { }
 
-    ngOnInit(): void { }
+  ngOnInit(): void { }
 
 }

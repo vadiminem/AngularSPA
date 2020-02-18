@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AngularSPA.Models;
@@ -190,7 +189,6 @@ namespace AngularSPA.Controllers
                 await _context.SaveChangesAsync();
             }
 
-            //return CreatedAtAction("GetFileLink", new { id = fileLink.Id }, fileLink);
             return Ok();
         }
 

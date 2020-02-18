@@ -2,10 +2,6 @@
   <h3>{{key}}</h3>
   <div class="list-files">
     <div *ngFor="let fl of service.linksList[key]" class="list-item" (click)="onClickListItem($event)">
-      <!--<div class="file-actions hidden">
-        <a>Скачать</a>
-        <a>Удалить</a>
-      </div>-->
       <div class="list-item-card">
         <div class="list-item-image">
           <i class="fa fa-file-o list-item-i" aria-hidden="true"></i>

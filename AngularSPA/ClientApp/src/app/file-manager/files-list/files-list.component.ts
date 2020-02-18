@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FileManagerService } from "src/app/shared/file-manager.service";
 import { saveAs } from "file-saver";
-import { formatDate } from "@angular/common";
 
 @Component({
   selector: 'app-files-list',
